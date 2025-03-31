@@ -13,14 +13,21 @@ var sampleArrayA = [
     ['C1', 'C2', 'C3']
     ];
     
-    sampleArrayA.reverse();
+    //sampleArrayA.reverse();
     //sampleArryAの順番を逆にする
     
     console.log("After reversing:", sampleArrayA);
     //逆順にした後の配列確認
    
     
-var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+ var sampleArrayB = [];
+    
+    sampleArrayB = sampleArrayB.concat(sampleArrayA[2]); 
+    //C1,C2,C3
+    sampleArrayB = sampleArrayB.concat(sampleArrayA[1]);
+    //B1,B2,B3
+    sampleArrayB = sampleArrayB.concat(sampleArrayA[0]);
+    //A1,A2,A3
     
     console.log("After reduce:", sampleArrayB); 
     //reduceを使った後の配列確認
