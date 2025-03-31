@@ -1,5 +1,9 @@
 <script type= "text/javascript">
     function toOneDimension(previousValue, currentValue) {
+        console.log("concat previousValue:", previousValue);
+        // previousValueの内容を表示
+         console.log("concat currentValue:", currentValue);
+        // currentValueの内容を表示
         return previousValue.concat(currentValue);
     }
     
@@ -12,16 +16,28 @@ var sampleArrayA = [
     sampleArrayA.reverse();
     //sampleArryAの順番を逆にする
     
-    console.log(sampleArrayA);
+    console.log("After reversing:", sampleArrayA);
+    //逆順にした後の配列確認
+   
     
 var sampleArrayB = sampleArrayA.reduce(toOneDimension);
-    console.log(sampleArrayB);
+    
+    console.log("After reduce:", sampleArrayB); 
+    //reduceを使った後の配列確認
+    
     
     for (var counterVar = 0; counterVar <sampleArrayB.length; counterVar++) {
+        
+         console.log("counterVar:", counterVar);
+        //counterVarの値を確認するため
+        console.log("sampleArrayB[counterVar]:", sampleArrayB[counterVar]); 
+        // ループの各反復で配列からどのデータが取り出されているのかを確認
+        
+        
         document.write('sampleArrayB[' +counterVar +']: ');
         document.write(sampleArrayB[counterVar]);
         document.write('<br />');
     }
-    console.log(counterVar);
+  
    
 </script>
